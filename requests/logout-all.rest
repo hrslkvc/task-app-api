@@ -1,0 +1,3 @@
+POST  http://127.0.0.1:3000/users/logout-all HTTP/2.0
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk1ZTNiNTA4ZmMxNzE2MzcyY2UxYmYiLCJpYXQiOjE1ODY5Njk4Mzd9.ByFx16WqBT9lFjMyg0b4NJqGMyn9Ht1gfbrSKH9nJp8

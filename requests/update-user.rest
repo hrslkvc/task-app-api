@@ -1,0 +1,6 @@
+PATCH http://127.0.0.1:3000/users/5e6fbe8b00293023296167a6 HTTP/2.0
+Content-Type: application/json
+
+{
+    "name": "jim"
+}

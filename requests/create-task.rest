@@ -1,0 +1,8 @@
+POST http://127.0.0.1:3000/tasks HTTP/2.0
+content-type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTljN2ZlMTBiZDUyMjY1MWYzZDgyZTMiLCJpYXQiOjE1ODczMTQ2NTd9.ywcrY0dsfm_es-Qm4AKbqAt4ojfdvkb1-z0RZPsItag
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTljOGI3OTA5Y2RjYTcxZTNiMDJmZGQiLCJpYXQiOjE1ODczMTc2MjV9.bmBfTFTrhjYrIslRz-FzKzJUbDEKBlscgwUBOhJTUUY
+
+{
+    "description": "my first task"
+}

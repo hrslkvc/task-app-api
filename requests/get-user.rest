@@ -1,0 +1,2 @@
+GET http://127.0.0.1:3000/users/5e6ba3012d389e129029d48a HTTP/2.0
+Content-Type: application/json

@@ -1,0 +1,8 @@
+POST http://127.0.0.1:3000/users/login HTTP/2.0
+content-type: application/json
+
+{
+    "email": "hariss@haris.com",
+    "name": "haris",
+    "password": "6543210"
+}

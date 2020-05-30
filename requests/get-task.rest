@@ -1,0 +1,4 @@
+GET http://127.0.0.1:3000/tasks/5e9c7ffd0bd522651f3d82e5 HTTP/2.0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTljN2ZlMTBiZDUyMjY1MWYzZDgyZTMiLCJpYXQiOjE1ODczMTQ2NTd9.ywcrY0dsfm_es-Qm4AKbqAt4ojfdvkb1-z0RZPsItag
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTljODU4NGJhMzUxNjZhYWVhOThkNGQiLCJpYXQiOjE1ODczMTYxMDB9.Zy-AG2v5jNahMdz6T-a7taXC8eVHsdXVyrjHVLPozrU

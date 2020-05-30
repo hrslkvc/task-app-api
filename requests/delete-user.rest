@@ -1,0 +1,2 @@
+DELETE http://127.0.0.1:3000/users/5e6bc5a2a7507c30934d1375 HTTP/2.0
+Content-Type: application/json

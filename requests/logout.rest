@@ -1,0 +1,3 @@
+POST http://127.0.0.1:3000/users/logout HTTP/2.0
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk1ZTNiNTA4ZmMxNzE2MzcyY2UxYmYiLCJpYXQiOjE1ODY5Njk4MzV9.3MXS9H4a9NO2x6dn5dWHns3YxHo7JvKNCKFfgI14xkE
