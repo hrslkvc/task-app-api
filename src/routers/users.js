@@ -101,7 +101,6 @@ router.patch("/:id", async (req, res) => {
 
         res.status(200).send(user);
     } catch (error) {
-        console.log(error);
         res.status(400).send(error);
     }
 });
@@ -121,7 +120,6 @@ router.delete("/:id", async (req, res) => {
 });
 
 router.post("/me/avatar", upload.single("avatar"), async (req, res) => {
-    console.log(req.file);
     res.send("success");
 });
 
