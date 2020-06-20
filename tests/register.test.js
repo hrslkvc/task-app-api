@@ -27,20 +27,9 @@ afterEach(async () => {
 
 // Tests
 describe("User registration", () => {
-    test("User already exists", async () => {
-        await request(app)
-            .post("/users")
-            .send({
-                email: "user@example.com",
-                name: "example",
-                password: "1234567",
-            })
-            .expect(400);
-    });
-
     test("Register success", async () => {
         await request(app)
-            .post("/users")
+            .post("/auth/register")
             .send({
                 email: "user1@example.com",
                 name: "example1",
@@ -49,9 +38,20 @@ describe("User registration", () => {
             .expect(201);
     });
 
+    test("User already exists", async () => {
+        await request(app)
+            .post("/auth/register")
+            .send({
+                email: "user@example.com",
+                name: "example",
+                password: "1234567",
+            })
+            .expect(400);
+    });
+
     test("Register invalid input", async () => {
         await request(app)
-            .post("/users")
+            .post("/auth/register")
             .send({
                 email: "user1@example.com",
                 name: "example1",
