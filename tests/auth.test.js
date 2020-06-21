@@ -25,10 +25,10 @@ afterEach(async () => {
     await User.deleteMany();
 });
 
-// Tests
+// Registration tests
 describe("User registration", () => {
     test("Register success", async () => {
-        await request(app)
+        const response = await request(app)
             .post("/auth/register")
             .send({
                 email: "user1@example.com",
@@ -36,6 +36,9 @@ describe("User registration", () => {
                 password: "1234567",
             })
             .expect(201);
+
+        const user = await User.findById(response.body.user._id);
+        expect(user).not.toBeNull();
     });
 
     test("User already exists", async () => {
@@ -55,6 +58,42 @@ describe("User registration", () => {
             .send({
                 email: "user1@example.com",
                 name: "example1",
+            })
+            .expect(400);
+    });
+});
+
+// Login tests
+describe("User login", () => {
+    test("Login success", async () => {
+        const response = await request(app)
+            .post("/auth/login")
+            .send({
+                email: "user@example.com",
+                password: "1234567",
+            })
+            .expect(200);
+
+        const user = await User.findById(response.body.user._id);
+        expect(response.body.token).toBe(user.tokens[0].token);
+    });
+
+    test("Login wrong password", async () => {
+        await request(app)
+            .post("/auth/login")
+            .send({
+                email: "user@example.com",
+                password: "!1234567",
+            })
+            .expect(400);
+    });
+
+    test("Login wrong email", async () => {
+        await request(app)
+            .post("/auth/login")
+            .send({
+                email: "!user@example.com",
+                password: "1234567",
             })
             .expect(400);
     });
